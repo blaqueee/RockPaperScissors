@@ -17,7 +17,7 @@ public class Main {
         game.printComputerResults(rounds - 1);
     }
 
-    private static Game writeResults(Game game){
+    private static void writeResults(Game game){
         String result = game.getUser().getChoice().getWinner(game);
 
         switch (result){
@@ -35,7 +35,6 @@ public class Main {
                 break;
         }
 
-        return game;
     }
 
 }
