@@ -7,7 +7,7 @@ import com.States.State;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Game {
+public class Game{
     private User user = new User();
     private Computer computer = new Computer();
 
