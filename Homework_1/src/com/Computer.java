@@ -1,10 +1,11 @@
 package com;
 
-import com.States.Choice;
 
-public class User {
-    private Choice choice;
-    private String name = "User";
+import com.States.State;
+
+public class Computer {
+    private State choice;
+    private String name = "Computer";
     private int amountOfWins = 0;
     private int amountOfLoses = 0;
     private int amountOfDraws = 0;
@@ -33,19 +34,15 @@ public class User {
         this.amountOfDraws = amountOfDraws;
     }
 
-    public Choice getChoice() {
+    public State getChoice() {
         return choice;
     }
 
-    public void setChoice(Choice choice) {
+    public void setChoice(State choice) {
         this.choice = choice;
     }
 
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 }

@@ -2,9 +2,7 @@ package com;
 
 import com.Exceptions.ChoiceNotFoundException;
 import com.Exceptions.EmptyChoiceException;
-import com.States.Paper;
-import com.States.Rock;
-import com.States.Scissors;
+import com.States.State;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -18,13 +16,13 @@ public class Game {
         int choice = rnd.nextInt(3) + 1;
         switch (choice){
             case 1:
-                computer.setChoice(new Rock());
+                computer.setChoice(State.ROCK);
                 break;
             case 2:
-                computer.setChoice(new Paper());
+                computer.setChoice(State.PAPER);
                 break;
             case 3:
-                computer.setChoice(new Scissors());
+                computer.setChoice(State.SCISSORS);
                 break;
         }
     }
@@ -41,13 +39,13 @@ public class Game {
 
                 switch(choice){
                     case 1:
-                        user.setChoice(new Rock());
+                        user.setChoice(State.ROCK);
                         break;
                     case 2:
-                        user.setChoice(new Paper());
+                        user.setChoice(State.PAPER);
                         break;
                     case 3:
-                        user.setChoice(new Scissors());
+                        user.setChoice(State.SCISSORS);
                         break;
                 }
                 return;
