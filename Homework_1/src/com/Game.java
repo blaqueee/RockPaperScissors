@@ -32,6 +32,8 @@ public class Game {
     public void initializeUserChoice(){
         Scanner sc = new Scanner(System.in);
         while(true){
+            printChoices();
+            System.out.print("Enter your choice: ");
             try {
                 String str = sc.nextLine().replaceAll("\\s+", "");
                 int choice = parseAndCheckChoice(str);
@@ -66,9 +68,10 @@ public class Game {
 
     private void printChoices(){
         System.out.println("""
+                Choice list:
                 1 -> Rock
                 2 -> Paper
-                3 -> Scissors
+                3 -> Scissors\n
                 """);
     }
 

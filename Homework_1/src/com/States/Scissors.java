@@ -10,11 +10,15 @@ public class Scissors extends Choice{
         User user = game.getUser();
         Computer computer = game.getComputer();
 
-        if (computer.getChoice().getClass().getName().equals(Paper.class.getName()))
+        if (computer.getChoice().getClass().getName().equals(Paper.class.getName())) {
+            System.out.println("Scissors VS Paper: User wins!");
             return user.getName();
-        else if (computer.getChoice().getClass().getName().equals(Scissors.class.getName()))
+        } else if (computer.getChoice().getClass().getName().equals(Scissors.class.getName())) {
+            System.out.println("Scissors VS Scissors: Draw!");
             return "Draw";
-        else
+        } else {
+            System.out.println("Scissors VS Rock: Computer wins!");
             return computer.getName();
+        }
     }
 }
