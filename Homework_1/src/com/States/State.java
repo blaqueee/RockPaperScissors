@@ -14,6 +14,9 @@ public enum State {
             } else if (computer.getChoice() == State.SCISSORS) {
                 System.out.println("Paper VS Scissors: Computer wins!");
                 return computer.getName();
+            } else if (computer.getChoice() == State.LIZARD) {
+                System.out.println("Paper VS Lizard: Computer wins!");
+                return computer.getName();
             } else {
                 if (computer.getChoice() == State.ROCK)
                     System.out.println("Paper VS Rock: User wins!");
@@ -30,6 +33,9 @@ public enum State {
 
             if (computer.getChoice() == State.PAPER) {
                 System.out.println("Rock VS Paper: Computer wins!");
+                return computer.getName();
+            } else if (computer.getChoice() == State.SPOCK) {
+                System.out.println("Rock VS Spock: Computer wins!");
                 return computer.getName();
             } else if (computer.getChoice() == State.ROCK) {
                 System.out.println("Rock VS Rock: Draw!");
@@ -50,6 +56,9 @@ public enum State {
 
             if (computer.getChoice() == State.ROCK) {
                 System.out.println("Scissors VS Rock: Computer wins!");
+                return computer.getName();
+            } else if (computer.getChoice() == State.SPOCK) {
+                System.out.println("Scissors VS Spock: Computer wins!");
                 return computer.getName();
             } else if (computer.getChoice() == State.SCISSORS) {
                 System.out.println("Scissors VS Scissors: Draw!");
