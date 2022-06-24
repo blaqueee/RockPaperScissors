@@ -7,11 +7,11 @@ import com.States.State;
 import java.util.Random;
 import java.util.Scanner;
 
-public class HardGame extends Game {
+public class NormalGame extends Game {
     @Override
     public void initializeCompChoice(){
         Random rnd = new Random();
-        int choice = rnd.nextInt(5) + 1;
+        int choice = rnd.nextInt(3) + 1;
         switch (choice){
             case 1:
                 computer.setChoice(State.ROCK);
@@ -21,12 +21,6 @@ public class HardGame extends Game {
                 break;
             case 3:
                 computer.setChoice(State.SCISSORS);
-                break;
-            case 4:
-                computer.setChoice(State.LIZARD);
-                break;
-            case 5:
-                computer.setChoice(State.SPOCK);
                 break;
         }
     }
@@ -52,12 +46,6 @@ public class HardGame extends Game {
                     case 3:
                         user.setChoice(State.SCISSORS);
                         break;
-                    case 4:
-                        user.setChoice(State.LIZARD);
-                        break;
-                    case 5:
-                        user.setChoice(State.SPOCK);
-                        break;
                 }
                 return;
             } catch (EmptyChoiceException | NumberFormatException | ChoiceNotFoundException e) {
@@ -72,7 +60,7 @@ public class HardGame extends Game {
         if (str.equals(""))
             throw new EmptyChoiceException("Choice can't be empty!");
         int choice = Integer.parseInt(str);
-        if (choice < 1 || choice > 5)
+        if (choice < 1 || choice > 3)
             throw new ChoiceNotFoundException("Non-existent choice! Try again!");
         return choice;
     }
@@ -85,8 +73,6 @@ public class HardGame extends Game {
                 1 -> Rock
                 2 -> Paper
                 3 -> Scissors
-                4 -> Lizard
-                5 -> Spock
                 """);
     }
 
